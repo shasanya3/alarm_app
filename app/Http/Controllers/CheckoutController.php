@@ -20,6 +20,7 @@ class CheckoutController extends Controller
 
   public function storePayment(Request $request)
    {
+    
 
  // Set your secret key: remember to change this to your live secret key in production
 // See your keys here: https://dashboard.stripe.com/account/apikeys
@@ -31,7 +32,6 @@ class CheckoutController extends Controller
 
 // Charge the user's card:
 $charge = \Stripe\Charge::create(array(
-  
  "amount" => Cart::total()*100,
  "currency" => "usd",
  "description" => "Example charge",
