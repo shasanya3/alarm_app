@@ -31,6 +31,7 @@ class CheckoutController extends Controller
 
 // Charge the user's card:
 $charge = \Stripe\Charge::create(array(
+  
  "amount" => Cart::total()*100,
  "currency" => "usd",
  "description" => "Example charge",
