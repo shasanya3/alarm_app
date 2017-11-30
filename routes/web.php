@@ -29,6 +29,9 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth','admin']], function (
 
   Route::resource('address', 'AddressController');
 
+  Route::get('/user/profile/{user}', 'UserProfileController@index')->name('user_profile');
+
+
 Route::get('/alarms', 'FrontController@alarm');
 Route::resource('/cart', 'CartController');
 Route::get('/cart/add-item/{id}', 'CartController@addItem')->name('cart.addItem');

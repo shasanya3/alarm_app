@@ -10,27 +10,23 @@
         <th>Name</th>
         <th>Price</th>
         <th>qty</th>
-        <th>door</th>
-        <th>Remove Items</th>
+        <th>Add Item |Remove Items</th>
       </tr>
     </thead>
 
     <tbody>
       @foreach($cartItems as $cartItem )
       <tr>
-        <td>{{$cartItem->name}}</td>
+        <td> {{$cartItem->name}}</td>
         <td>${{$cartItem->price}}</td>
         <td width="auto">
            {!! Form::open(['route' => ['cart.update',$cartItem->rowId], 'method' => 'PUT']) !!}
             <input name="qty" type="text" value="{{$cartItem->qty}}">
 
         </td>
-        <td>
-      {!! Form::select('door', ['one door'=>'One Door','two door'=>'Two Door','three door'=>'Three Door'] , $cartItem->options->has('door')?$cartItem->options->door:'' ) !!}
 
-        </td>
         <td>
-          <input type= 'submit' style="float: left" class="btn btn-sm btn-default"  value="Ok">
+          <input type= 'submit' style="float: left" class="btn btn-sm btn-default"  value="Add">
           {!! Form::close() !!}
 
           <form action="{{route('cart.destroy',$cartItem->rowId)}}"  method="POST">
@@ -57,7 +53,7 @@
 
   </table>
 
-   <a href="{{route('checkout.shipping')}}" class="button">Checkout</a>
+   <a href="{{route('checkout.shipping')}}" class="btn btn-default">Checkout</a>
 </div>
 
 

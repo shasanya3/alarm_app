@@ -14,7 +14,7 @@ class AddPriceToProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-          $table->string('price')->after('door');;
+          $table->string('price');
 
         });
     }

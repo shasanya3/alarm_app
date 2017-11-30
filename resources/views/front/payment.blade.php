@@ -2,6 +2,36 @@
 
 @section('content')
 <div class="row">
+  <div class="container">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+
+        </tr>
+      </thead>
+
+      <tbody>
+        @foreach($cartItems as $cartItem )
+        <tr>
+          <td>  {{$cartItem->name}}</td>
+          <td>  ${{$cartItem->price}}</td>
+        </tr>
+        @endforeach
+
+      </tbody>
+
+    </table>
+  </div>
+
+
+
+
+</div>
+
+
+<div class="row">
   <div class="col-md-6 col-md-offset-3">
       <form action="{{route('payment.store')}}"  method="post" id="payment-form">
         {{csrf_field()}}

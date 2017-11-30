@@ -18,7 +18,7 @@
     <h5>  {{$alarm->price}}</h5>
 
     <p>{{$alarm->description}}</p>
-    <a href="{{route('cart.addItem',$alarm->id)}}" class="button expanded add-to-cart">
+    <a href="{{route('cart.addItem',$alarm->id)}}" class="btn btn-default">
       Add to Cart
     </a>
   </div>

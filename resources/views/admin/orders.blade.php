@@ -2,7 +2,7 @@
 
 @section('content')
 
-  <h3>Orders</h3>
+<center><h3>Orders</h3></center>
   <ul>
     @foreach($orders as $order)
       <li>

@@ -44,7 +44,6 @@ class ProductsController extends Controller
       'name'=> 'required',
       'description'=> 'required',
       'price' => 'required',
-      'door'=> 'required',
       'image' =>'image|mimes:png,jpg,jpeg|max:10000'
 
     ]);
@@ -78,7 +77,8 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        //
+      $product=Product::find($id);
+     return view('admin.product.edit',compact('product'));
     }
 
     /**
@@ -90,7 +90,26 @@ class ProductsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        $product=Product::find($id);
+        $formInput=$request->except('image');
+//        validation
+        $this->validate($request,[
+            'name'=>'required',
+            'description'=>'required',
+            'price'=>'required',
+            'image'=>'image|mimes:png,jpg,jpeg|max:10000'
+        ]);
+        //        image upload
+        $image=$request->image;
+        if($image){
+            $imageName=$image->getClientOriginalName();
+            $image->move('images',$imageName);
+            $formInput['image']=$imageName;
+        }
+         $product->update($formInput);
+        return redirect()->route('product.index');
+
     }
 
     /**
@@ -101,6 +120,7 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-        //
+      Product::destroy($id);
+      return back();
     }
 }

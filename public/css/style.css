@@ -8,7 +8,7 @@
 }
 
 .navbar-default{
-	background: #fff;
+	background: #000;
 	border: 0;
 	font-family: Poppins;
 }
@@ -16,9 +16,6 @@
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-}
-body{
-	background-color: #F8F8F8;
 }
 
 .images img{
@@ -75,9 +72,7 @@ body{
   font-size:25px;
 }
 
-.price-box .header.header-green{
-  background-color:#4CAf50;
-}
+
 
 .price-box li{
   padding:20px;
@@ -134,7 +129,7 @@ footer{
 }
 
 #contact{
-  background:url(/gray.png);
+  background:url(banner.jpeg);
   padding:40px;
   color:#fff;
   border-top:#333 7px solid;
@@ -155,4 +150,59 @@ footer{
   background:#fff;
   border:0;
   font-family:Poppins;
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+.header-overlay{
+  height:100vh;
+  position: absolute;
+  top:0;
+  left:0;
+  width:100vw;
+  z-index:1;
+  background:#225470;
+  opacity:0.85;
+}
+
+.header-content{
+  z-index:2;
+}
+
+.header-content h1{
+  font-size:50px;
+  margin-bottom:0;
+}
+
+.header-content p{
+  font-size:1.5rem;
+  display:block;
+  padding-bottom:2rem;
+}
+
+.btn{
+  background: #34b3a0;
+  color:#fff;
+  font-size:1.2rem;
+  padding: 1rem 2rem;
+  text-decoration: none;
+}
+
+.section{
+  padding:20px 0;
+}
+
+.section-b{
+  background:#333;
+  color:#fff;
+}
+
+@media(max-width:960px){
+  .container{
+    padding-right:3rem;
+    padding-left:3rem;
+  }
 }

@@ -2,10 +2,10 @@
 
 @section('content')
 
-<h3> Add Product</h3>
+<center>   <h3> Add Product</h3></center>
 
   <div class="row">
-    <div class="col-md-8 col-offset-3">
+    <div class="col-xs-8 col-xs-offset-2">
       {!! Form::open(['route' => 'product.store', 'method' => 'post', 'files' => true]) !!}
         <div class="form-group">
           {{ Form:: label('name', 'Name')}}
@@ -25,10 +25,6 @@
 
        </div>
 
-        <div class="form-group">
-              {{ Form::label('door', 'Door') }}
-              {{ Form::select('door', [ 'one door' => 'One door', 'Two door' => 'Two door','Three door'=>'Three door'], null, ['class' => 'form-control']) }}
-          </div>
 
         <div class="form-group">
           {{ Form:: label('image', 'Image')}}

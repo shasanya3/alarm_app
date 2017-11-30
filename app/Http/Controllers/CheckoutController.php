@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use Auth;
+use App\Product;
 use App\Order;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -15,12 +16,13 @@ class CheckoutController extends Controller
 
   public function payment()
     {
-      return view('front.payment');
+      $cartItems=Cart::content();
+      return view('front.payment',compact('cartItems'));
     }
 
   public function storePayment(Request $request)
    {
-    
+
 
  // Set your secret key: remember to change this to your live secret key in production
 // See your keys here: https://dashboard.stripe.com/account/apikeys
@@ -39,6 +41,8 @@ $charge = \Stripe\Charge::create(array(
 ));
 
  order::createOrder();
+ return "Order completed";
+
    }
 
 

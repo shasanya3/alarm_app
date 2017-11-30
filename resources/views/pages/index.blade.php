@@ -4,6 +4,7 @@
 
 @section('content')
 
+
   <section id="showcase">
       <div class="container">
         <div class="row">
@@ -14,8 +15,10 @@
           </div>
           <div class="col-md-6 col-sm-6">
             <div class="showcase-right">
-              <h1>Hands-free help from the Google Assistant</h1>
-              <p>Google Home voice-activated speaker.consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
+              <h1>Protect your home today</h1>
+              <p>Penguin Protection values safty for all of there customers and is rated number 1 in security.
+              We have different types of protection systems that guaranteed to work or your money back guaranteed.
+            Give us a call today!</p>
             </div>
             <br>
             <a class="btn btn-default btn-lg showcase-btn">Read More</a>
@@ -32,73 +35,86 @@
 </section>
 
 <section>
-        <center> <h1>Compare Our Packages</h1></center>
+        <center> <h1>Our Products</h1></center>
         <center><h4>Let us help you get the right system to protect your family and home.</h4></center>
 </section>
-
-<div class="col">
-    <ul class="price-box">
-      <li class="header">Simple</li>
-      <li class="emph"><strong>$ 5.99</strong> / Month</li>
-      <li><strong>20GB</strong> Disk Space</li>
-      <li><strong>10GB</strong> Data Transfer</li>
-      <li><strong>2</strong> Domains</li>
-      <li><strong>50</strong> Email Accounts</li>
-      <li><strong>2</strong> FTP Accounts</li>
-      <li class="emph"><a href="#" class="button">Sign Up</a></li>
-    </ul>
-  </div>
-
-  <div class="col">
-    <ul class="price-box best">
-      <li class="header header-green">Standard</li>
-      <li class="emph"><strong>$ 15.99</strong> / Month</li>
-      <li><strong>75GB</strong> Disk Space</li>
-      <li><strong>50GB</strong> Data Transfer</li>
-      <li><strong>10</strong> Domains</li>
-      <li><strong>100</strong> Email Accounts</li>
-      <li><strong>Unlimited</strong> FTP Accounts</li>
-      <li class="emph"><a href="#" class="button">Sign Up</a></li>
-    </ul>
-  </div>
-
-  <div class="col">
-    <ul class="price-box">
-      <li class="header">Simple</li>
-      <li class="emph"><strong>$ 25.99</strong> / Month</li>
-      <li><strong>120GB</strong> Disk Space</li>
-      <li><strong>100GB</strong> Data Transfer</li>
-      <li><strong>Unlimited</strong> Domains</li>
-      <li><strong>Unlimited</strong> Email Accounts</li>
-      <li><strong>UNlimited</strong> FTP Accounts</li>
-      <li class="emph"><a href="#" class="button">Sign Up</a></li>
-    </ul>
-  </div>
-
-  <section id="showcase">
+<hr>
+<section>
+  <div class="row">
     <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-sm-6">
-                <div class="showcase-left">
-                     <img src="family.jpg">
-                </div>
-            </div>
-         <div class="col-md-6 col-sm-6">
-            <div class="showcase-right">
-              <h1>Pengium Protection rank 1# in services</h1>
-              <p>Google Home voice-activated speaker.consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-            </div>
-            <br>
-            <a class="btn btn-default btn-lg showcase-btn">Read More</a>
-          </div>
-        </div>
+
+
+      @forelse($alarms->chunk(4) as $chunk)
+        @foreach($chunk as $alarm)
+      <div class="col-md-3">
+          <div class="img-wrapper">
+
+            <a href="#">
+             <img src="{{url('images',$alarm->image)}}"/>
+            </a>
       </div>
+      <h3>{{$alarm->name}}</h3>
+    </div>
+      @endforeach
+    @empty
 
-      <section id="contact">
-        <div class="row">
+    <h3>No alarms</h3>
 
-
+    @endforelse
       </div>
+  </div>
+
+</section>
+<hr>
+<section id="info2">
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-sm-6">
+      <div class="info-left">
+        <h2>Customer 1st!</h2>
+        <p>Customers are our first priority, making sure that the environment that the customer live in are safe at all times. Our detector are top in the industry and can detect fires immediately.
+        </figure> </p>
+      </div>
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <div class="info-right">
+        <h2>Products</h2>
+        <p>Our current inventory include 4 products Fire Detector, Flood Detector, Seruity Alarm, and Bio-Hazard Alarm. Speak with one of our representatives today to recieve additional information
+        about our products. </p>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+
+      <section id="contact" style=" background:url(image3.png);">
+     <div class="container">
+       <div class="row">
+         <div class="col-md-5 col-sm-5">
+           <form>
+             <div class="form-group">
+               <label>Name: </label>
+               <input class="form-control" type="text" name="" value="" placeholder="Enter Name">
+             </div>
+             <div class="form-group">
+               <label>Email: </label>
+               <input class="form-control" type="text" name="" value="" placeholder="Enter Email">
+             </div>
+             <div class="form-group">
+               <label>Message: </label>
+               <textarea class="form-control" name="" value="" placeholder="Enter Message"></textarea>
+             </div>
+             <button class="btn btn-default">Submit</button>
+           </form>
+         </div>
+         <div class="col-md-7 col-sm-7">
+
+         </div>
+       </div>
+     </div>
+   </section>
+
 
   </section>
 
