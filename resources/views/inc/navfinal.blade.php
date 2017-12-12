@@ -57,11 +57,14 @@
                                 <li><a href="{{ url('admin/product') }}"> Admin View Products</a></li>
                                   <li><a href="{{ url('admin/orders') }}"> Admin Orders</a></li>
                           @endif
+                        <li> <a href="{{ route('user_profile',auth()->user()) }}">
+                                    My Profile
+                                </a></li> 
                           <li role="presentation" class="divider"></li>
                       @endif
-                                    <li>
-                                        <a href="{{ route('logout') }}"><i class="fa fa-sign-out"></i> Logout</a>
-                                    </li>
+                            <li>
+                                <a href="{{ route('logout') }}"><i class="fa fa-sign-out"></i> Logout</a>
+                            </li>
                                 </ul>
                             </li>
                         @endif

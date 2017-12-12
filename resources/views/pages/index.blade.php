@@ -16,12 +16,10 @@
           <div class="col-md-6 col-sm-6">
             <div class="showcase-right">
               <h1>Protect your home today</h1>
-              <p>Penguin Protection values safty for all of there customers and is rated number 1 in security.
-              We have different types of protection systems that guaranteed to work or your money back guaranteed.
-            Give us a call today!</p>
+              <p>Penguin Protection values safety above all. We are rated number one in Customer Satisfaction and safety.
+                Our systems are custom built for your needs. Give us a call today!</p>
             </div>
             <br>
-            <a class="btn btn-default btn-lg showcase-btn">Read More</a>
           </div>
         </div>
       </div>
@@ -29,14 +27,14 @@
 
 <section id="testimonial">
     <div class="container">
-        <p> " Pengiun Protection is the best company in the world. I had to switch from ADT to pengiun Protection because the customer service was excellent."</p>
+        <p> "Penguin Protection is the best company in the world. I had to switch from ADT to Penguin Protection because the customer service was excellent."</p>
         <p class="customer">- Mary Jane</p>
     </div>
 </section>
 
 <section>
         <center> <h1>Our Products</h1></center>
-        <center><h4>Let us help you get the right system to protect your family and home.</h4></center>
+        <center><h4>Let us help you get the right system to protect your business or home!</h4></center>
 </section>
 <hr>
 <section>
@@ -72,14 +70,15 @@
     <div class="col-md-6 col-sm-6">
       <div class="info-left">
         <h2>Customer 1st!</h2>
-        <p>Customers are our first priority, making sure that the environment that the customer live in are safe at all times. Our detector are top in the industry and can detect fires immediately.
+        <p>Customers are our first priority. We make sure our systems are top of the line so that our customers always feel safe and protected.
         </figure> </p>
       </div>
     </div>
     <div class="col-md-6 col-sm-6">
       <div class="info-right">
         <h2>Products</h2>
-        <p>Our current inventory include 4 products Fire Detector, Flood Detector, Seruity Alarm, and Bio-Hazard Alarm. Speak with one of our representatives today to recieve additional information
+        <p>The alarms we currently provide include; Fire Detection, Flood Detection, Seruity Alarm, and Bio-Hazard Alarm.
+          Speak with one of our representatives today to recieve additional information
         about our products. </p>
       </div>
     </div>
@@ -92,21 +91,20 @@
      <div class="container">
        <div class="row">
          <div class="col-md-5 col-sm-5">
-           <form>
-             <div class="form-group">
-               <label>Name: </label>
-               <input class="form-control" type="text" name="" value="" placeholder="Enter Name">
-             </div>
-             <div class="form-group">
-               <label>Email: </label>
-               <input class="form-control" type="text" name="" value="" placeholder="Enter Email">
-             </div>
-             <div class="form-group">
-               <label>Message: </label>
-               <textarea class="form-control" name="" value="" placeholder="Enter Message"></textarea>
-             </div>
-             <button class="btn btn-default">Submit</button>
-           </form>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>  <br>
+            <br>
+            <br>
+            <br>  <br>
+              <br>
+              <br>
+              <br>
          </div>
          <div class="col-md-7 col-sm-7">
 

@@ -1,7 +1,7 @@
 <?php
 
 namespace App;
-
+use App\Cart;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -34,7 +34,10 @@ class User extends Authenticatable
 
     public function orders()
     {
-        return $this->hasMany(Order::class);
+    
+
+
+        return $this->hasMany(Order::class)->latest();;
     }
 
     public function address()
@@ -45,4 +48,5 @@ class User extends Authenticatable
     {
       return 'name';
     }
+
 }

@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class Order extends Model
 {
 
-  protected $fillable=['total', 'delivered'];
+  protected $fillable=['total', 'delivered', 'user_id','address_id'];
 
    public function orderItems()
     {
@@ -16,6 +16,10 @@ class Order extends Model
 
 
     }
+
+    public function products(){
+    return $this->belongsToMany(Product::class);
+  }
     public function user()
         {
           return $this->belongsTo(User::class);
