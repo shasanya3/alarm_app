@@ -3,14 +3,15 @@
 @section('content')
 
  <center> <h3>{{$user->name}}</h3> </center>
-
-@forelse($user->orders as $order)
- <table class="table table-bordered">
+ <table class="table">
    <tr>
      <th>Item</th>
      <th>Name</th>
      <th>Price</th>
    </tr>
+<!-- So user_id ->(c orders) orders -->
+@forelse($user->orders as $order)
+
           @forelse($order->products as $product)
           <tr>
             <td>
@@ -25,7 +26,7 @@
             <td>{{ $product->name }}</td>
             <td>{{ $product->price }}</td>
           @empty
-              no product
+
 
           @endforelse
 

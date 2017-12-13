@@ -41,7 +41,7 @@ $charge = \Stripe\Charge::create(array(
 ));
 
  order::createOrder();
- return "Order completed";
+ return redirect('/');
 
    }
 
