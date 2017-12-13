@@ -6,21 +6,28 @@
            @if(!empty($categories))
            @forelse($categories as $category)
                <li class="active">
-                   <a href="{{route('category.show',$category->id)}}">{{$category->name}}</a>
-{{-- delete button --}}
-                   <form action="{{route('category.destroy',$category->id)}}"  method="POST">
-                       {{csrf_field()}}
-                       {{method_field('DELETE')}}
-                       <input class="btn btn-sm btn-danger" type="submit" value="Delete">
-                    </form>
+                 <div class="row">
+                   <div class="col-md-3">
+                     <a href="{{route('category.show',$category->id)}}">{{$category->name}}</a>
+  {{-- delete button --}}
+                     <form action="{{route('category.destroy',$category->id)}}"  method="POST">
+                         {{csrf_field()}}
+                         {{method_field('DELETE')}}
+                         <input class="btn btn-sm btn-danger" type="submit" value="Delete">
+                      </form>
 
-               </li>
-           @empty
-               <li>No Items</li>
-           @endforelse
-               @endif
+                 </li>
+             @empty
+                 <li>No Items</li>
+             @endforelse
+                 @endif
 
-       </ul>
+         </ul>
+
+                   </div>
+
+                 </div>
+
 
 
 
